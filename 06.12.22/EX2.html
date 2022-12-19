@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Введите число</h1>
+        <input type="text" id="number"> = <input type="text" id="numPer"><br>
+        <input type="button" id="GvR" onclick="fGvR()" value="из градусов в радианы"><input type="button" id="RvG" onclick="fRvG()" value="из радианов в градусы"><br>
+        <input type="button" id="ZvK" onclick="fZvK()" value="из Цельсии в Кельвины"><input type="button" id="KvZ" onclick="fKvZ()" value="из Кульвинов в Цельсии"><br>
+        <script>
+            function fGvR(){
+                var num =document.getElementById('number').value;S
+                document.getElementById('numPer').value = num*((Math.PI)/180);
+            }
+            function fRvG(){
+                var num =document.getElementById('number').value;
+                document.getElementById('numPer').value = num*(180/(Math.PI));
+            }
+            function fZvK(){
+                var num =document.getElementById('number').value;
+                var num = Number(num);
+                document.getElementById('numPer').value = num+273.15;
+            }
+            function fKvZ(){
+                var num =document.getElementById('number').value;
+                document.getElementById('numPer').value = num-275.15;
+            }
+        </script>
+    </div>
+</body>
+</html>

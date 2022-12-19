@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <td>
+            <div>
+                <h1>Дано</h1>
+                <p>Введите значение коэффициента a <input type="text" id="a"></p>
+                <p>Введите значение коэффициента b <input type="text" id="b"></p>
+                <p>Введите значение коэффициента c <input type="text" id="c"></p>
+            </div>
+        </td>
+        <td>
+            <div>
+                <h1>Решение</h1>
+                <p>D= <input type="text" id="D"></p>
+                <p>Для уравнения</p>
+                <input type="text"><br>
+                <p>X1= <input type="text" id="x1"></p>
+                <p>X2= <input type="text" id="x2"></p>
+            </div>
+        </td>
+    </table>
+    <input type="submit" id="start" onclick="math();" value="Показать решение"><button id="clear">Очистить</button>
+    <script>
+        function math(){
+            var a =document.getElementById('a').value;
+            var b =document.getElementById('b').value;
+            var c =document.getElementById('c').value;
+            var D =  Math.pow(b,2)-4*a*c;
+            document.getElementById('D').value = D;
+            var x1 =((b*-1)+(Math.sqrt(D)))/(2*a);
+            var x2 =((b*-1)-(Math.sqrt(D)))/(2*a);
+            document.getElementById('x1').value = x1;
+            document.getElementById('x2').value = x2;
+        }
+    </script>
+</body>
+</html>

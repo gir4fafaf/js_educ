@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td></td><td><input type="number" id="row1col1"></td><td><input type="number" id="row1col2"></td><td><input type="number" id="row1col3"></td><td></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="row2col1"></td><td><input type="number" id="row2col2"></td><td><input type="number" id="row2col3"></td><td><p>=<input type="text" id="identifier"></p></td>
+        </tr>
+        <tr>
+            <td></td><td><input type="number" id="row3col1"></td><td><input type="number" id="row3col2"></td><td><input type="number" id="row3col3"></td><td></td>
+        </tr>
+    </table>
+    <input type="button" onclick="count()" value="Найти определитель">
+    <script>
+        function count() {
+            var r1_c1 =document.getElementById('row1col1').value;
+            var r1_c2 =document.getElementById('row1col2').value;
+            var r1_c3 =document.getElementById('row1col3').value;
+
+            var r2_c1 =document.getElementById('row2col1').value;
+            var r2_c2 =document.getElementById('row2col2').value;
+            var r2_c3 =document.getElementById('row2col3').value;
+
+            var r3_c1 =document.getElementById('row3col1').value;
+            var r3_c2 =document.getElementById('row3col2').value;
+            var r3_c3 =document.getElementById('row3col3').value;
+            document.getElementById('identifier').value =r1_c1*(r2_c2*r3_c3-r3_c2*r2_c3)- r1_c2*(r2_c1*r3_c3-r3_c1*r2_c3)-r1_c3*(r2_c1*r3_c2-r3_c1*r2_c2);
+        }
+    </script>
+</body>
+</html>

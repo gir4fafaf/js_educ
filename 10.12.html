@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Принтер</p>
+    <select id="slectPrinter" size="5">
+        <option selected="true">HP Color Laser Jet 2600n</option>
+        <option>HP Laser Jet 1018</option>
+        <option>Lexmark X2350</option>
+        <option>Epson Stylus C110</option>
+        <option>Ricoh Aficio CL7100D</option>
+    </select><br><br>
+    <button onclick="PrinterOnClick()">Добавить в корзину</button><br>
+    <p>Монитор</p>
+    <select id="slectMonitor" size="5">
+        <option selected="true">lG Flatron L226Q-WF</option>
+        <option>Samaung SyncMaster 225BW</option>
+        <option>View Sonic VX2255w mb</option>
+        <option>Acer X221W</option>
+        <option>Envision G22LWK</option>
+    </select><br><br>
+    <button onclick="MonitorOnClick()">Добавить в корзину</button><br>
+    <p>Интерактивные доски</p>
+    <select id="slectUntDosk" size="5">
+        <option selected="true">SMA RTboard</option>
+        <option>Interw rite SchoolBoard</option>
+        <option>Poly Vision Webster</option>
+        <option>Promethean ACTIVboard 50</option>
+        <option>ACTIVboard 64</option>
+    </select><br><br>
+    <button onclick="UntDoskrOnClick()">Добавить в корзину</button><br><br>
+
+    <p>Выбранные товары (корзина)</p>
+    <select id="karzina" name="karzina" size="5" style="width: 250px;"></select><br><br>
+    <button id="btnRemove" onclick="rem()">Удалить выбранный товар</button>
+
+    <p>Валюта <select id="valita">
+        <option>рубли</option>
+        <option>долары</option>
+    </select>
+    </p>
+
+    <p>Стоиость <input type="text" id="Stoimost"> выбранного товара</p>
+    <p>Общая стоиость <input type="text" id="ObStoimost"></p>
+    <script>
+        document.getElementById('karzina').onclick =function name() {
+            var karzElem= document.getElementById('karzina').innerText;
+            stoim(karzElem);
+        }
+        function PrinterOnClick() {
+            var idSelectPrinter = document.getElementById('slectPrinter');
+            var idkarzina = document.getElementById('karzina');
+            idkarzina.add(new Option(idSelectPrinter.value,''));
+            Symma(idSelectPrinter.value);
+        }
+
+        function MonitorOnClick() {
+            var idSelectMonitor = document.getElementById('slectMonitor');
+            var idkarzina = document.getElementById('karzina');
+            idkarzina.add(new Option(idSelectMonitor.value,''));
+            Symma(idSelectMonitor.value);
+        }
+
+        function UntDoskrOnClick() {
+            var idSelectPrinter = document.getElementById('slectUntDosk');
+            var idkarzina = document.getElementById('karzina');
+            idkarzina.add(new Option(idSelectPrinter.value,''));
+            Symma(idSelectPrinter.value);
+        }
+       
+
+
+function rem() {
+    var x = document.getElementById("karzina");
+  x.remove(x.selectedIndex);
+}
+
+
+
+        function Symma(tovar) {
+            var ObStoimost = document.getElementById('ObStoimost').value;
+            switch (tovar) {
+                case 'HP Color Laser Jet 2600n':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1000;
+                    break;
+                case 'HP Laser Jet 1018':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1100;
+                    break;
+                case 'Lexmark X2350':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1200;
+                    break;
+                case 'Epson Stylus C110':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1300;
+                    break;
+                case 'Ricoh Aficio CL7100D':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1400;
+                    break;
+            }
+            switch (tovar) {
+                case 'lG Flatron L226Q-WF':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1000;
+                    break;
+                case 'Samaung SyncMaster 225BW':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1100;
+                    break;
+                case 'View Sonic VX2255w mb':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1200;
+                    break;
+                case 'Acer X221W':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1300;
+                    break;
+                case 'Envision G22LWK':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1400;
+                    break;
+            }
+            switch (tovar) {
+                case 'SMA RTboard':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1000;
+                    break;
+                case 'Interw rite SchoolBoard':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1100;
+                    break;
+                case 'Poly Vision Webster':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1200;
+                    break;
+                case 'Promethean ACTIVboard 50':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1300;
+                    break;
+                case 'ACTIVboard 64':
+                document.getElementById('ObStoimost').value=Number(ObStoimost)+1400;
+                    break;
+            }
+        }
+        function stoim(tovar) {
+            var ObStoimost = document.getElementById('Stoimost').value;
+            switch (tovar) {
+                case 'HP Color Laser Jet 2600n':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1000;
+                    break;
+                case 'HP Laser Jet 1018':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1100;
+                    break;
+                case 'Lexmark X2350':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1200;
+                    break;
+                case 'Epson Stylus C110':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1300;
+                    break;
+                case 'Ricoh Aficio CL7100D':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1400;
+                    break;
+            }
+            switch (tovar) {
+                case 'lG Flatron L226Q-WF':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1000;
+                    break;
+                case 'Samaung SyncMaster 225BW':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1100;
+                    break;
+                case 'View Sonic VX2255w mb':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1200;
+                    break;
+                case 'Acer X221W':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1300;
+                    break;
+                case 'Envision G22LWK':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1400;
+                    break;
+            }
+            switch (tovar) {
+                case 'SMA RTboard':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1000;
+                    break;
+                case 'Interw rite SchoolBoard':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1100;
+                    break;
+                case 'Poly Vision Webster':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1200;
+                    break;
+                case 'Promethean ACTIVboard 50':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1300;
+                    break;
+                case 'ACTIVboard 64':
+                document.getElementById('Stoimost').value=Number(ObStoimost)+1400;
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
