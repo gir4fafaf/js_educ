@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body{
+            max-width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        button{
+            background-color: orangered;
+            color: white;
+            border-radius: 15px;
+            border:0px;
+            padding-top: 10pt;
+            padding-bottom: 10pt;
+            padding-left: 50pt;
+            padding-right: 50pt;
+            font-size: 16px;
+        }
+        .block{
+            display: grid;
+            gap:10%;
+            grid-template-columns: 45% 45%;
+            justify-items: center;
+            font-size: 15pt;
+        }
+        a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Для детей и родителей</h1>
+    <div class="block">
+        <div>
+            <img src="folders.png" width="80pt" height="80pt" align="left"><br>
+            <a href="#">Методические материалы</a><br>
+            Для подготовки к экзаменам и получения дополнительных знаний
+        </div>
+        <div>
+            <img src="folders.png" width="80pt" height="80pt" align="left"><br>
+            <a href="#">Список учебной литературы</a><br>
+            Для подготовки к экзаменам и получения дополнительных знаний
+        </div>
+    </div>
+    <div class="block">
+        <div>
+            <img src="folders.png" width="80pt" height="80pt" align="left"><br>
+            <a href="#">Интерактивные занятия</a><br>
+            Для подготовки к экзаменам и получения дополнительных знаний
+        </div>
+        <div>
+            <img src="folders.png" width="80pt" height="80pt" align="left"><br>
+            <a href="#">Беседа с руководителем</a><br>
+            Для подготовки к экзаменам и получения дополнительных знаний
+        </div>
+    </div>
+    <div style="background-color: rgb(199, 199, 199); padding-top: 20pt; margin-top: 20pt;">
+        <h2 align="center">Свяжитесь со мной, если у вас есть вопросы</h2>
+        <div style="display: flex; justify-content: center;">
+            <button>Связаться с учителем</button>
+        </div>
+    </div>
+</body>
+</html>
